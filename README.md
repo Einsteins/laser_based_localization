@@ -1,11 +1,11 @@
 # laser_based_localization
 This project introduces a novel localization algorithm mainly based on Lidars (Light detection and ranging) to solve the localization problem of a multi robots system.
 # 1. Package overview
-* `launch`: 
-* `map`: URDF description of the MiR robot
-* `msg`: URDF description of the MiR robot
-* `src`: URDF description of the MiR robot
-* `bagfile`: URDF description of the MiR robot
+* `launch`: two test demo (mir test and gazebo test) and two launch file for scan_fusion and laser_localization. 
+* `map`: two map data (.txt) for mir test and gazebo test
+* `msg`: self defined message type 
+* `src`: algorithm scripts
+* `bagfile`: two ros bag file for mir test and gazebo test
 
 
 # 2. Installation
@@ -42,13 +42,11 @@ cd ~/catkin_ws/src/
 git clone https://github.com/Jryl/MIR200_Sim_Demo.git
 ```
 ### Install all dependencies
-```bash
-sudo apt-get update -qq
-sudo apt-get install -qq -y python-rosdep
-sudo rosdep init
-rosdep update
-rosdep install --from-paths ./ -i -y --rosdistro kinetic
-```
+sudo apt update
+sudo apt install python-pip
+pip install --upgrade pip
+python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+pip install -U scikit-learn
 
 ### Build all packages in the catkin workspace
 ```bash
