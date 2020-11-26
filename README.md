@@ -1,9 +1,11 @@
 # laser_based_localization
 This project introduces a novel localization algorithm mainly based on Lidars (Light detection and ranging) to solve the localization problem of a multi robots system.
 # 1. Package overview
-* `mir_actions`: Action definitions for the MiR robot
-* `mir_description`: URDF description of the MiR robot
-
+* `launch`: 
+* `map`: URDF description of the MiR robot
+* `msg`: URDF description of the MiR robot
+* `src`: URDF description of the MiR robot
+* `bagfile`: URDF description of the MiR robot
 
 
 # 2. Installation
