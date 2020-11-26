@@ -37,8 +37,20 @@ python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy
 
 pip install -U scikit-learn
 
+# 3. Start  Node 
+### laser_fusion
+roslaunch laser_based_localization laser_fusion.launch
 
-# 3. Start  demo (existing bagfile)
+This Node subscribes two laser topics of the master robot , and publish the fused laser as topic /robots_scan_fusion.
+
+The topic name and link of two laser topics can be defeined in launch file.
+
+### laser_localization
+roslaunch laser_based_localization laser_localization.launch
+
+This Node subscribe /robots_scan_fusion and cal
+
+# 4. Start  demo (existing bagfile)
 ### DON'T FORGET change the data path in launch file , otherwise it can't find the file
 1. Gazebo test demo  
 
