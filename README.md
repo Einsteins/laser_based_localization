@@ -17,26 +17,36 @@ For ROS installation http://wiki.ros.org/melodic/Installation/Ubuntu
 
 ### Install
 cd catkin_workspace/src
+
 git clone 
+
 cd ..
+
 catkin_make
 
 ### Install all dependencies
 The version of python for program is V 2.7 , some libraries are required for program
 
 sudo apt update
+
 sudo apt install python-pip
+
 pip install --upgrade pip
+
 python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+
 pip install -U scikit-learn
 
 
 # 3. Start  demo (existing bagfile)
 ### DON'T FORGET change the data path in launch file , otherwise it can't find the file
 1. Gazebo test demo  
+
 roslaunch laser_based_localization gazebo_test_demo.launch
 
+
 2. Mir test demo
+
 roslaunch laser_based_localization mir_test_demo.launch
 
 
