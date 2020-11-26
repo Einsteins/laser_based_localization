@@ -1,0 +1,24 @@
+<?xml version="2.0" ?>
+<launch>
+   <node pkg= "rosbag" type="play" name="player" output="screen" args="--clock --pause   /home/matchos/catkin_ws/src/laser_based_localization/bagfile/2020-09-09-12-11-29.bag"/> 
+
+
+   <node pkg="laser_based_localization" type="laserfusion.py" name="scan_fusion" >
+
+
+   <!-- Here define the topic name of Laserscan -->
+   <param  name="f_scan"  value="/mur/mir/f_scan" />
+   <param name = "b_scan"  value ="/mur/mir/b_scan" />
+
+   <!--Here define frame id     -->
+   <param name = "front_link" value="mur/mir/front_laser_link" />
+   <param name = "back_link" value="mur/mir/back_laser_link" />
+   <param name = "map" value="map" />
+   </node>
+
+
+
+ 
+
+</launch>
+

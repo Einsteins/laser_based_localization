@@ -1,0 +1,47 @@
+<?xml version="2.0" ?>
+<launch>
+    <!-- This launch file is specified for the bagfile mir_test.bag -->
+   <node pkg= "rosbag" type="play" name="player" output="screen" args="--clock --pause   /home/matchos/catkin_ws/src/laser_based_localization/bagfile/mir_test.bag"/> 
+
+
+   <node pkg="laser_based_localization" type="laserfusion.py" name="scan_fusion" >
+
+
+   <!-- Here define the topic name of Laserscan -->
+   <param  name="f_scan"  value="/mur/mir/f_scan" />
+   <param name = "b_scan"  value ="/mur/mir/b_scan" />
+
+   <!--Here define frame id     -->
+   <param name = "front_link" value="mur/mir/front_laser_link" />
+   <param name = "back_link" value="mur/mir/back_laser_link" />
+   <param name = "map" value="map" />
+   </node>
+
+   <node pkg="laser_based_localization" type="localization.py" name="laser_localization">
+
+   <param name = "map_link" value="map" />
+
+   <!--  define the number of robots excepts master -->
+   <param name = "number_of_robots" value="1" />
+
+   <!--  master robot position -->
+   <param name = "master_initial_x" value="7.02" />
+   <param name = "master_initial_y" value="12.57" />
+   <param name = "master_odometry"  value="mur/mir/odom_enc" />
+
+
+
+   <!-- one robot situation, define initial position and topic name and frame_id -->
+
+   <param name = "robot1_initial_x" value="8.02" />
+   <param name = "robot1_initial_y" value="6.3" />
+   <param name = "robot1_odometry_link"  value="miranda/mir/odom" />
+   <param name = "robot1_odometry"  value="miranda/mir/odom_enc" />
+
+   </node>
+
+
+ 
+
+</launch>
+

@@ -1,0 +1,76 @@
+<?xml version="2.0" ?>
+<launch>
+
+
+<node pkg="laser_based_localization" type="localization.py" name="laser_localization">
+
+<param name = "map_link" value="map" />
+
+<!--  define the path of map -->
+
+<param name = "map_path" value="/home/matchos/catkin_ws/src/laser_based_localization/map/mir_test2_map.txt" />
+
+
+<!--  define the number of robots excepts master -->
+<param name = "number_of_robots" value="1" />
+
+<!--  master robot position -->
+<param name = "master_initial_x" value="7.02" />
+<param name = "master_initial_y" value="12.57" />
+<param name = "master_odometry"  value="mur/mir/odom_enc" />
+
+
+
+<!-- one robot situation, define initial position and topic name and frame_id -->
+
+<param name = "robot1_initial_x" value="8.02" />
+<param name = "robot1_initial_y" value="6.3" />
+<param name = "robot1_odometry_link"  value="miranda/mir/odom" />
+<param name = "robot1_odometry"  value="miranda/mir/odom_enc" />
+
+
+<!-- two robot situation, define initial position and topic name and frame_id -->
+<!--
+<param name = "robot1_initial_x" value="8.02" />
+<param name = "robot1_initial_y" value="6.3" />
+<param name = "robot1_odometry_link"  value="miranda/mir/odom" />
+<param name = "robot1_odometry"  value="miranda/mir/odom_enc" />
+
+
+<param name = "robot2_initial_x" value=" " />
+<param name = "robot2_initial_y" value=" " />
+<param name = "robot2_odometry_link"  value=" " />
+<param name = "robot2_odometry"  value="   " />   
+-->
+
+
+<!-- three robot situation, define initial position and topic name and frame_id -->
+<!--
+<param name = "robot1_initial_x" value="8.02" />
+<param name = "robot1_initial_y" value="6.3" />
+<param name = "robot1_odometry_link"  value="miranda/mir/odom" />
+<param name = "robot1_odometry"  value="miranda/mir/odom_enc" />
+
+
+<param name = "robot2_initial_x" value=" " />
+<param name = "robot2_initial_y" value=" " />
+<param name = "robot2_odometry_link"  value=" " />
+<param name = "robot2_odometry"  value="   " />   
+
+
+<param name = "robot3_initial_x" value=" " />
+<param name = "robot3_initial_y" value=" " />
+<param name = "robot3_odometry_link"  value=" " />
+<param name = "robot3_odometry"  value="   " />   
+-->
+
+
+
+
+
+</node>
+
+ 
+
+</launch>
+
