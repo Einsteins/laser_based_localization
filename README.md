@@ -9,17 +9,29 @@ This project introduces a novel localization algorithm mainly based on Lidars (L
 
 
 # 2. Installation
-The instructions below use the ROS distro `kinetic` as an example.
-
 ### Preliminaries
+The instructions below use the ROS distro `melodic` as an example.
 If you haven't already installed ROS on your PC, you need to add the ROS apt
-repository. This step is necessary for either binary or source install.
+repository. 
+For ROS installation http://wiki.ros.org/melodic/Installation/Ubuntu   
 
-```
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
-sudo apt-get update -qq
-```
+### Install
+git clone  master repository in     yourpc/catkin_workspace/src
+cd ..
+catkin_make
+
+### Python Libiaries
+The version of python for program is V2.7 , some libraries are required for program
+
+sudo apt update
+sudo apt install python-pip
+pip install --upgrade pip
+
+python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+
+pip install -U scikit-learn
+
+
 
 ### Binary install
 For a binary install, it suffices to run this command:
