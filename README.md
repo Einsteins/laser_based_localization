@@ -1,5 +1,5 @@
 # laser_based_localization
-This project introduces a novel localization algorithm mainly based on Lidars (Light detection and ranging) to solve the localization problem of a multi robots system.
+This project introduces a localization algorithm mainly based on Lidars (Light detection and ranging) to solve the localization problem of a multi robots system.
 # 1. Package overview
 * `launch`: two test demo (mir test and gazebo test) and two launch file for scan_fusion and laser_localization. 
 * `map`: two map data (.txt) for mir test and gazebo test
